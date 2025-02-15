@@ -85,6 +85,9 @@ body {
     border-radius: 5px;
     background-color: #252525;
   }
+  .card{
+    position: relative;
+  }
 
   .card > *{
     padding-top: 10px;
@@ -100,4 +103,10 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
+  }
+
+  .play{
+    position: absolute;
+    bottom: 104px;
+    right: 13px;
   }
