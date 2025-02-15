@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -6,22 +7,29 @@
 body {
   /* background-color: black; */
   color: white;
+  font-family: "Roboto", serif;
+
 }
 
 .left {
   width: 25vw;
-  padding: 34px;
+  padding: 10px;
 }
 
 .right {
   width: 75vw;
 }
+.home{
+
+}
 .home ul li {
   display: flex;
   gap: 15px;
-  width: 144px;
+  width: 14px;
   list-style: none;
+  padding-top: 14px;
 }
- .bg-grey{
-  background-color: #121212;
+
+ .heading{
+
  }
