@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background-color: black; */
+  color: white;
+}
+
+.left {
+  width: 25vw;
+  padding: 34px;
+}
+
+.right {
+  width: 75vw;
+}
+.home ul li {
+  display: flex;
+  gap: 15px;
+  width: 144px;
+  list-style: none;
+}
+ .bg-grey{
+  background-color: #121212;
+ }
