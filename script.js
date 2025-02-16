@@ -11,7 +11,7 @@ async function getSongs() {
     const element = as[index];
 
     if (element.href.endsWith(".mp3")) {
-      songs.push(element.href);
+      songs.push(element.href.split("/songs/")[1]);
     }
   }
   return songs;
@@ -21,28 +21,28 @@ async function main() {
   // get songs list
   let songs = await getSongs();
   console.log(songs);
-
+// show all the songs in the playlist
   let songUl = document
     .querySelector(".songList")
     .getElementsByTagName("ul")[0];
 
   for (const song of songs) {
-    songUl.innerHTML = songUl.innerHTML + song;
+    songUl.innerHTML = songUl.innerHTML + `
+    
+                            <li>
+                            <img class="invert" src="/img/music.svg" alt="" srcset="" />
+                            <div class="songInfo">
+                                <div class="songName">${song.replaceAll("%20", " ")}</div>
+                                <div class="songArtist">Abhishek Gaikwad</div>
+                            </div>
+                            <div class="playNow">
+                                <span>Play Now</span>
+                                <img class="playSvg invert" src="/img/play.svg" alt="" srcset="" />
+                            </div>
+                        </li>`;
   }
 
-  //   play audio
-  var audio = new Audio(songs[0]);
-  // audio.play();
 
-  const audioElement = new Audio(songs[0]);
-  audioElement.addEventListener("loadeddata", () => {
-    let duration = audioElement.duration;
-    // The duration variable now holds the duration (in seconds) of the audio clip
-
-    setInterval(() => {
-      console.log(audio.duration, audio.currentSrc, audio.currentTime);
-    }, 1000);
-  });
 }
 
 main();

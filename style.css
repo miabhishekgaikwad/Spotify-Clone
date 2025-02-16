@@ -124,11 +124,13 @@ body {
 }
 
 .playbar {
-  position: absolute;
-  bottom: 0px;
-  background-color: rgb(243, 176, 229);
-  width: 90%;
+  position: fixed;
+  bottom: 80px;
+  background-color: rgb(194, 191, 191);
+  width: 70vw;
   padding: 12px;
+  border-radius: 20px;
+  filter: invert(1);
 }
 
 .songButton {
@@ -139,11 +141,26 @@ body {
 }
 
 .songList ul{
-  list-style: none;
-  list-style-type: decimal;
   padding: 0 12px;
 }
 
+.songList ul li {
+  list-style-type: decimal;
+  display: flex;
+  gap: 10px;
+  cursor:pointer;
+  padding: 13px;
+  border: 1px solid white;
+  margin: 12px 0;
+  border-radius: 12px;
+  text-wrap: wrap ;
+  justify-content: space-around;
+}
+.songList{
+  height: 544px;
+  overflow: auto;
+  margin-bottom: 44px 0;
+}
 .buttons{
   display: flex;
   gap: 13px;
@@ -180,4 +197,21 @@ body {
 }
 .loginBtn:hover{
   transform: scale(1.1);
+}
+
+.playNow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playNow span{
+  font-size: 15px;
+  width: 64px;
+  padding: 12px;
+}
+
+.songInfo{
+  font-size: 14px;
+  width: 344px;
 }
