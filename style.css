@@ -214,3 +214,11 @@ body {
   font-size: 14px;
   width: 344px;
 }
+
+.seekbar{
+  height: 2px;
+  width: 100%;
+  border: solid red;
+  position: absolute;
+  bottom: 0;
+}
