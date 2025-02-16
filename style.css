@@ -81,10 +81,12 @@ body {
   width: 200px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #252525;
 }
 .card {
+  background-color: #252525;
   position: relative;
+  text-wrap: wrap;
+  height: 300px;
 }
 
 .card > * {
@@ -101,6 +103,8 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   margin: 30px;
+  min-height: 80vh;
+  overflow: scroll;
 }
 
 .play {
@@ -122,8 +126,8 @@ body {
 .playbar {
   position: absolute;
   bottom: 0px;
-  background-color: rgb(153, 63, 133);
-  width: 100%;
+  background-color: rgb(243, 176, 229);
+  width: 90%;
   padding: 12px;
 }
 
@@ -132,4 +136,33 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
+
+.songList ul{
+  list-style: none;
+  list-style-type: decimal;
+  padding: 0 12px;
+}
+
+.buttons{
+  display: flex;
+  gap: 13px;
+}
+.singupBtn{
+  height: 40px;
+  width: 80px;
+  border-radius: 92px;
+  background-color: rgb(34, 34, 34);
+  border: none;
+  color: white;
+}
+.loginBtn{
+  height: 46px;
+  width: 90px;
+  border-radius: 92px;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
 }
