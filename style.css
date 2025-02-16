@@ -86,7 +86,7 @@ body {
   background-color: #252525;
   position: relative;
   text-wrap: wrap;
-  height: 300px;
+  height: 100%;
 }
 
 .card > * {
@@ -103,7 +103,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   margin: 30px;
-  min-height: 80vh;
+  min-height: 70vh;
   overflow: scroll;
 }
 
@@ -154,15 +154,30 @@ body {
   border-radius: 92px;
   background-color: rgb(34, 34, 34);
   border: none;
-  color: white;
+  color: rgb(134, 132, 132);
+  transition: all 0.1s ease-out;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
 }
 .loginBtn{
   height: 46px;
   width: 90px;
   border-radius: 92px;
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   border: none;
   color: black;
   font-size: 15px;
   font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+.singupBtn:hover{
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+.loginBtn:hover{
+  transform: scale(1.1);
 }
