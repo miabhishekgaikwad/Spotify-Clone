@@ -123,13 +123,18 @@ body {
 }
 
 .playbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  bottom: 80px;
-  background-color: rgb(194, 191, 191);
-  width: 70vw;
-  padding: 12px;
-  border-radius: 20px;
+  bottom: 30px;
   filter: invert(1);
+  background: #e2d9d9;
+  border-radius: 10px;
+  width: 90%;
+  padding: 12px;
+  width: 70vw;
+  min-height: 40px;
 }
 
 .songButton {
@@ -216,12 +221,14 @@ body {
 }
 
 .seekbar{
-  height: 2px;
-  width: 100%;
-  border: solid black;
-  position: absolute;
-  bottom: 0;
+  height: 4px;
+  width: 98%;
+  background: black;
   border-radius: 10px;
+  position: absolute;
+  bottom: 8px;
+  margin: 6px;
+  cursor: pointer;
 }
 
 .circle{
@@ -230,6 +237,7 @@ body {
   border-radius: 13px;
   background-color: black;
   position: relative;
-  bottom: 6px;
+  bottom: 5px;
   left: 0%;
+  transition: left 0.5s;
 }
