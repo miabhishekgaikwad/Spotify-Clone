@@ -62,6 +62,18 @@ async function main() {
     })
   })
 
+  // attach  an event listner to play, next and previous buttons
+
+  play.addEventListener("click", ()=>{
+    if(curruntSong.paused){
+      curruntSong.play()
+      play.src = "/img/pause.svg"
+    }else{
+      curruntSong.pause()
+      play.src = "/img/play.svg"
+    }
+  })
+
 
 }
 
