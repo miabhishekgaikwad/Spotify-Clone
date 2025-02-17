@@ -26,6 +26,9 @@ const playMusic = (track)=>{
   // audio.play()
   curruntSong.src = "/songs/" + track;
   curruntSong.play()
+  play.src = "/img/pause.svg"
+  document.getElementById("songInfo").innerHTML =` Playing:- ${track.replace('.mp3',' ')}`;
+  document.querySelector(".songTime").innerHTML ="00:00/00:00"
 }
 
 async function main() {

@@ -123,9 +123,9 @@ body {
 }
 
 .playbar {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   position: fixed;
   bottom: 30px;
   filter: invert(1);
@@ -242,6 +242,11 @@ body {
   transition: left 0.5s;
 }
 
-.songButton> * {
+.songButton > img {
   cursor: pointer;
+}
+
+.abvoebar{
+  display: flex;
+  justify-content: space-between;
 }
