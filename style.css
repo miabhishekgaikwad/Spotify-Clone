@@ -30,6 +30,10 @@ body {
   font-weight: bold;
 }
 
+.logo img{
+  width: 111px;
+}
+
 .heading {
   display: flex;
   gap: 15px;

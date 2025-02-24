@@ -39,7 +39,7 @@ const playMusic = (track, pause = false) => {
     curruntSong.play();
     play.src = "/img/pause.svg";
   }
-  document.getElementById("songInfo").innerHTML = decodeURI(track);
+  document.getElementById("songInfo").innerHTML = decodeURI(track).replace(".mp3", " ");
   document.querySelector(".songTime").innerHTML = "00:00/00:00";
 };
 
@@ -99,11 +99,21 @@ async function main() {
 
   // listen for time update event
   curruntSong.addEventListener("timeupdate", () => {
-    console.log(curruntSong.currentTime, curruntSong.duration);
     document.querySelector(".songTime").innerHTML = `${secondsToMinutesSeconds(
       curruntSong.currentTime
     )} / ${secondsToMinutesSeconds(curruntSong.duration)}`;
+    document.querySelector(".circle").style.left = (curruntSong.currentTime / curruntSong.duration) * 100 + "%"
   });
+
+  // add an enevt listenr to seekbar
+
+  document.querySelector(".seekbar").addEventListener("click", e=>{
+    let percent = (e.offsetX/e.target.getBoundingClientRect().width) * 100 ;
+    document.querySelector(".circle").style.left = percent + "%" ;
+    curruntSong.currentTime = ((curruntSong.duration) * percent)/100
+  } )
+
+
 }
 
 main();
