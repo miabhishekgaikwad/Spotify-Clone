@@ -297,6 +297,15 @@ body {
 display: none;
 }
 
+.info div {
+  word-break: break-all;
+}
+
+.songList .info {
+  font-size: 13px;
+  width: 344px;
+}
+
 
 @media (max-width: 1400px) {
   .left{
@@ -348,5 +357,9 @@ display: none;
     flex-direction: column;
     align-items: center;
     gap: 23px;
+  }
+
+  .songInfo, .songTime{
+    width: auto;
   }
 }
