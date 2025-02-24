@@ -123,9 +123,9 @@ body {
 }
 
 .playbar {
-  /* display: flex;
+  /* display: flex; */
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   position: fixed;
   bottom: 30px;
   filter: invert(1);
@@ -220,6 +220,12 @@ body {
   width: 344px;
 }
 
+#songInfo{
+  color: rgb(255, 255, 255);
+  padding: 0 12px;
+  width: 250px;
+}
+
 .seekbar{
   height: 4px;
   width: 98%;
@@ -249,4 +255,14 @@ body {
 .abvoebar{
   display: flex;
   justify-content: space-between;
+}
+
+.songInfo, .songTime{
+  color: rgb(255, 255, 255);
+}
+
+.songList {
+  height: 544px;
+  overflow: auto;
+  margin-bottom: 44px;
 }
