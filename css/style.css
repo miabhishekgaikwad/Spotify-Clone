@@ -386,11 +386,12 @@ body {
   }
 
   .card {
-    width: 44vw;
+    width: 55vw;
   }
   .cardContainer {
     margin: 0;
     justify-content: center;
+    max-height: 50vh;
   }
 
   .close {
@@ -408,8 +409,8 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 500px) {
   .card{
-    width: 64vw;
+    width: auto;
   }
 }
