@@ -33,9 +33,9 @@ async function getSongs(folder) {
                             <img class="invert" src="/img/music.svg" alt="" srcset="" />
                             <div class="songInfo">
                                 <div class="songName">${song.replaceAll(
-        "%20",
-        " "
-      )}</div>
+                                  "%20",
+                                  " "
+                                )}</div>
                                 <div class="songArtist">Abhishek Gaikwad</div>
                             </div>
                             <div class="playNow">
@@ -200,6 +200,24 @@ async function main() {
         ".volumeLev"
       ).innerHTML = `${e.target.value} / 100`;
     });
+
+  //add an event listner to mute the track
+
+  document.querySelector(".volume>img").addEventListener("click", (e) => {
+    if (e.target.src.includes("/img/volume.svg")) {
+      e.target.src = e.target.src.replace("/img/volume.svg", "/img/mute.svg");
+      currentSong.volume = 0;
+      document
+        .querySelector(".range")
+        .getElementsByTagName("input")[0].value = 0;
+    } else {
+      e.target.src = e.target.src.replace("/img/mute.svg", "/img/volume.svg");
+      currentSong.volume = 0.1;
+      document
+        .querySelector(".range")
+        .getElementsByTagName("input")[0].value = 50;
+    }
+  });
 }
 
 main();
