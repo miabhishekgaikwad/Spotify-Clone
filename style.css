@@ -95,13 +95,12 @@ body {
   border-radius: 5px;
 }
 .card {
-  background-color: #252525;
-  position: relative;
-  text-wrap: wrap;
-  height: 100%;
   width: 200px;
   padding: 10px;
-  transition: all .9 ease-out;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+  transition: all .9s;
 }
 .card:hover{
   background-color: #535353;
@@ -123,16 +122,24 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   margin: 30px;
-  min-height: 70vh;
+  /* min-height: 70vh; */
   overflow-y: auto;
 }
 
 .play {
+  width: 28px;
+  height: 28px;
+  background-color: #1fdf64;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  right: 13px;
+  bottom: 88px;
+  right: 17px;
   opacity: var(--a);
-  bottom: 99px;
-  transition: all 0.4s ease-out;
+  transition: all 1s ease-out;
 }
 
 .play:hover {
