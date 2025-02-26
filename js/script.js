@@ -205,6 +205,10 @@ async function main() {
       document.querySelector(
         ".volumeLev"
       ).innerHTML = `${e.target.value} / 100`;
+
+      if(currentSong.volume > 0){
+        document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("/img/mute.svg", "/img/volume.svg");
+      }
     });
 
   //add an event listner to mute the track
