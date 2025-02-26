@@ -336,6 +336,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  cursor: pointer;
+}
+
+.range input{
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
