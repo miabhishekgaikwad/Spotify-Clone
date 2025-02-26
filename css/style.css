@@ -119,11 +119,13 @@ body {
 
 .cardContainer {
   display: flex;
+  margin: 30px;
   gap: 10px;
   flex-wrap: wrap;
   margin: 30px;
-  /* min-height: 70vh; */
+  max-height: 70vh;
   overflow-y: auto;
+  padding-bottom: 60vh;
 }
 
 .play {
@@ -302,6 +304,7 @@ body {
   display: none;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .hamburgerCont {

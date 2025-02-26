@@ -17,6 +17,9 @@ async function getSongs(folder) {
       songs.push(element.href.split(`${folder}/`)[1]);
     }
   }
+
+
+
   // show all the songs in the playlist
   let songUl = document
     .querySelector(".songList")
@@ -55,6 +58,8 @@ async function getSongs(folder) {
       );
     });
   });
+
+  return songs
 }
 
 function secondsToMinutesSeconds(seconds) {
@@ -107,7 +112,7 @@ async function diplayAlbums() {
 
       cardContainer.innerHTML =
         cardContainer.innerHTML +
-        `<div data-folder="marathi" class="card">
+        `<div data-folder="${folder}" class="card">
             <div class="play">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="50" height="50" fill="none">
                 <circle cx="16" cy="16" r="14" fill="#1fdf64" />
@@ -125,6 +130,7 @@ async function diplayAlbums() {
     Array.from(document.getElementsByClassName("card")).forEach((e) => {
       e.addEventListener("click", async (item) => {
         songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+        playMusic(songs[0])
       });
     });
   }
